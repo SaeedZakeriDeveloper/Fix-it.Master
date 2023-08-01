@@ -7,8 +7,12 @@ const app = express();
 // Middleware to parse incoming form data
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname+'/index.html'));
+  //__dirname : It will resolve to your project folder.
+})
 // Define a route to handle form submissions
+
 app.post('/submit_form', (req, res) => {
   // Extract form data from the request
   const { activity, firstName, lastName, email, description } = req.body;
