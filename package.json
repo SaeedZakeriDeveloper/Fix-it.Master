@@ -4,7 +4,8 @@
   "description": "emailTest",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+
+    "start": "node app.js"
   },
   "author": "saeed",
   "license": "ISC",
