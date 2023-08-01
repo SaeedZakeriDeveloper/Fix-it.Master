@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const path = require ('path');
+
+const path = require ('path');/////////////
 
 
 
@@ -10,8 +11,12 @@ const app = express();
 // Middleware to parse incoming form data
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname+'/index.html'));
+
+app.use(express.static(path.join(__dirname,'public'))) /////////////////
+
+
+app.get('/', (req, res) => {                           ///////////////////
+  res.sendFile(path.join(__dirname+'/index.html'));     ///////////////////
   //__dirname : It will resolve to your project folder.
 })
 // Define a route to handle form submissions
