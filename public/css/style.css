@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +11,12 @@
 }
 
 :root {
-    --topHeader: #00b4d8;
-    --blueColor: #001D3D;
+    --topHeader: black;
+    --blueColor: #c1542d;
     --yellowColor: #00b4d8;
     --goldColor: #FFD60A;
     --headingColor: #13287e;
-    --textColor: #003566;
+    --textColor: black;
     --whiteColor: #ffffff;
 }
 
@@ -194,7 +196,7 @@ header .container nav ul li {
 header .container nav ul li a {
     display: block;
     text-transform: capitalize;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--blueColor);
     padding: 1.2rem 2.6rem;
     border-radius: 2rem;
@@ -238,7 +240,9 @@ header .container nav ul li a:hover {
 /* Start Home Section  */
 .home {
 
-    background-image: url("../img/imageedit_4_5723801564.png");
+    /* background-image: url("../img/imageedit_4_5723801564.png"); */
+    background-image: url("../img/pexels-ivan-samkov-5799130.jpg");
+
     height: 102vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,14 +252,16 @@ header .container nav ul li a:hover {
 
 @media(max-width: 767px) {
     .home {
-        background-image: url("../img/blur:small.png");
+        /* background-image: url("../img/blur:small.png"); */
+        background-image: url("../img/pexels-ivan-samkov-5799130.jpg");
+
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
     }
 }
 
-@media(min-width: 650px) {
+/* @media(min-width: 650px) {
     .home {
         background-size: auto;
     }
@@ -289,7 +295,7 @@ header .container nav ul li a:hover {
     .home {
         background-size: 60%;
     }
-}
+} */
 
 
 
