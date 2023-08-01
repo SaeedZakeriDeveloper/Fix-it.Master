@@ -1123,7 +1123,7 @@ footer .container .box input {
     padding: 1rem 1.1rem;
     font-size: 1.6rem;
     border: 1px solid var(--textColor);
-    border-right: none;
+    /*border-right: none;*/
 }
 
 footer .container .box input:focus::placeholder {
@@ -1137,7 +1137,7 @@ footer .container .box button {
     color: var(--textColor);
     padding: 1rem 1.1rem;
     border: 1px solid var(--textColor);
-    border-left: none;
+    /*border-left: none;*/
     cursor: pointer;
 }
 
