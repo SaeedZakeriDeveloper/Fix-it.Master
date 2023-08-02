@@ -1492,7 +1492,7 @@ col-2{
 
 /* Apply the animation to the image */
 .containerAnimation img {
-    animation: slideout 3s ease;
+    animation: slideout 5s ease;
     /* Keep the image visible in its final position after the animation */
     animation-fill-mode: forwards;
 }
@@ -1528,7 +1528,7 @@ col-2{
 
 /* Apply the animation to the image */
 .containerAnimation1 img {
-    animation: slideIn 3s ease;
+    animation: slideIn 5s ease;
     /* Keep the image visible in its final position after the animation */
     animation-fill-mode: forwards;
 }
