@@ -300,3 +300,5 @@ function switchLanguage(language) {
   // Start shaking when the page is loaded or when required.
   startShaking();
   
+
+  
