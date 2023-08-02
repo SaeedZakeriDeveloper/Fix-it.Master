@@ -1321,7 +1321,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:not(button.franceBtn,button.unitedBtn):hover {
     background-color: #45a049;
 }
 
@@ -1550,4 +1550,18 @@ col-2{
     animation: shake 4s ease infinite; /* Adjust the animation duration and timing function as needed */
 
 
+}
+
+.franceBtn {
+    width: 70px;
+    height: 45px;
+    background: url(../img/france_round_button_with_iso_code_256.png);
+    background-size: cover;
+}
+
+.unitedBtn {
+    width: 70px;
+    height: 45px;
+    background: url(../img/united_kingdom_round_button_with_iso_code_256.png);
+    background-size: cover;
 }

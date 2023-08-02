@@ -299,6 +299,21 @@ function switchLanguage(language) {
   
   // Start shaking when the page is loaded or when required.
   startShaking();
+
+  function changeLanguage() {
+    let element=document.getElementById("langBtn");
+    let className=element.getAttribute("class");
+    if(className == 'franceBtn'){
+        document.getElementById("langBtn").classList.remove('franceBtn');
+        document.getElementById("langBtn").classList.add('unitedBtn'); 
+        window.location.href = "";
+    }
+    else if(className == 'unitedBtn'){
+        document.getElementById("langBtn").classList.remove('unitedBtn');
+        document.getElementById("langBtn").classList.add('franceBtn'); 
+        window.location.href = "";
+    }
+  }
   
 
   ///////////
