@@ -14,9 +14,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Serve the English version by default
 
 
+
+
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/index_fr.html'));
 });
+
+
+
+
 
 
 // Define a route to handle form submissions
