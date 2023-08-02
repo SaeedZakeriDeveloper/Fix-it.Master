@@ -8,15 +8,18 @@
     box-sizing: border-box;
     outline: none;
     transition: all .3s ease-in-out;
+    
 }
+
+
 
 :root {
     --topHeader: black;
     --blueColor: #c1542d;
     --yellowColor: #00b4d8;
     --goldColor: #FFD60A;
-    --headingColor: #13287e;
-    --textColor: black;
+    --headingColor: #ffffff;
+    --textColor: #c1542d;
     --whiteColor: #ffffff;
 }
 
@@ -25,6 +28,10 @@ html {
     font-size: 62.5%;
     font-weight: 400;
     scroll-behavior: smooth;
+}
+
+body{
+    background-color: #202020;
 }
 
 ::-webkit-scrollbar {
@@ -90,7 +97,7 @@ section {
 }
 
 .btn {
-    background-color: var(--yellowColor);
+    background-color: white;
     color: var(--textColor);
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -197,7 +204,7 @@ header .container nav ul li a {
     display: block;
     text-transform: capitalize;
     font-size: 1.8rem;
-    color: var(--blueColor);
+    color: white;
     padding: 1.2rem 2.6rem;
     border-radius: 2rem;
 }
@@ -409,12 +416,12 @@ header .container nav ul li a:hover {
 
 .services .container .serv-box .serv-heading {
     text-align: center;
-    margin-bottom: 6rem;
+    /* margin-bottom: 6rem; */
 }
 
 .services .container .serv-box .serv-heading h3 {
     font-size: 3.3rem;
-    color: var(--blueColor);
+    color: white
 }
 
 .services .container .serv-box .serv-heading h4 {
@@ -426,6 +433,8 @@ header .container nav ul li a:hover {
 
 .services .container .serv-box .serv-img img {
     max-width: 100%;
+    border-radius: 5%;
+
 }
 
 .services .container .serv-box p {
@@ -874,9 +883,9 @@ header .container nav ul li a:hover {
 
 .pricing .container .pricing-container .price-box {
     position: relative;
-    background-color: var(--whiteColor);
+    background-color:#202020 ;
     padding: 2.7rem 0;
-    border: 1px solid #f5f5f5;
+    border: 2px solid #c1542d;
     border-radius: .5rem;
     cursor: pointer;
     box-shadow: 0 0.2rem 0.2rem -0.1rem rgb(0 0 0 / 30%),
@@ -916,8 +925,8 @@ header .container nav ul li a:hover {
     font-size: 11.9rem;
     font-weight: 600;
     color: var(--blueColor);
-    border-top: 1px solid #f5f5f5;
-    border-bottom: 1px solid #f5f5f5;
+    /* border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5; */
 }
 
 .pricing .pricing-container .price-box .price span {
@@ -944,7 +953,7 @@ header .container nav ul li a:hover {
 .pricing .pricing-container .price-box p {
     position: relative;
     font-size: 1.7rem;
-    color: #000;
+    color:#ffffff ;
     max-width: 22.6rem;
     margin: 2.4rem auto;
 }
@@ -1083,9 +1092,9 @@ footer .container .box:first-child {
     flex-direction: column;
 }
 
-footer .container .box img {
+/* footer .container .box img {
     margin-bottom: 3rem;
-}
+} */
 
 footer .container .box h4 {
     font-weight: 300;
@@ -1123,7 +1132,7 @@ footer .container .box input {
     padding: 1rem 1.1rem;
     font-size: 1.6rem;
     border: 1px solid var(--textColor);
-    border-right: none;
+    /*border-right: none;*/
 }
 
 footer .container .box input:focus::placeholder {
@@ -1137,7 +1146,7 @@ footer .container .box button {
     color: var(--textColor);
     padding: 1rem 1.1rem;
     border: 1px solid var(--textColor);
-    border-left: none;
+    /*border-left: none;*/
     cursor: pointer;
 }
 
@@ -1199,6 +1208,8 @@ footer .copyright p span {
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 20px;
+    
 }
 
 video {
@@ -1214,8 +1225,8 @@ video {
     transform: translateX(-50%);
     text-align: center;
     color: white;
-    opacity: 0;
-    animation: fadeInDown 3s ease-in-out 1s forwards;
+    opacity: 1;
+    animation: fadeInDown 3s ease-in-out 0.5s forwards;
 }
 
 .text-animation h2 {
@@ -1440,4 +1451,84 @@ button[type="submit"]:hover {
         margin-top: 50px;
         /* Adjust this value as needed */
     }
+}
+
+.col-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+
+col-2{
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+
+
+
+
+
+/* Set the container to take the full viewport height */
+.containerAnimation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Set the initial position of the image */
+.containerAnimation img {
+    position: relative;
+    left: -100%;
+    border-radius: 5%;
+}
+
+
+/* Add the animation */
+@keyframes slideout {
+    0% { left: -100%; }
+    100% { left: 0; }
+}
+
+/* Apply the animation to the image */
+.containerAnimation img {
+    animation: slideout 3s ease;
+    /* Keep the image visible in its final position after the animation */
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+.containerAnimation1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Set the initial position of the image */
+.containerAnimation1 img {
+    position: relative;
+    right: -100%;
+    border-radius: 5%;
+}
+
+
+/* Add the animation */
+@keyframes slideIn {
+    0% { right: -100%; }
+    100% { right: 0; }
+}
+
+/* Apply the animation to the image */
+.containerAnimation1 img {
+    animation: slideIn 3s ease;
+    /* Keep the image visible in its final position after the animation */
+    animation-fill-mode: forwards;
 }
