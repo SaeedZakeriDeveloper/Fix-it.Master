@@ -195,8 +195,28 @@ function showFormWithSlideDown() {
 //       setInterval(addShakeEffect, 2000); // Repeat every 2 seconds (2000 milliseconds)
 //   }
   
+<<<<<<< HEAD
 //   // Start shaking when the page is loaded or when required.
 //   startShaking();
+=======
+  // Start shaking when the page is loaded or when required.
+  startShaking();
+
+  function changeLanguage() {
+    let element=document.getElementById("langBtn");
+    let className=element.getAttribute("class");
+    if(className == 'franceBtn'){
+        document.getElementById("langBtn").classList.remove('franceBtn');
+        document.getElementById("langBtn").classList.add('unitedBtn'); 
+        window.location.href = "";
+    }
+    else if(className == 'unitedBtn'){
+        document.getElementById("langBtn").classList.remove('unitedBtn');
+        document.getElementById("langBtn").classList.add('franceBtn'); 
+        window.location.href = "";
+    }
+  }
+>>>>>>> 1455f2daed56c1b6432c74f7c1f1dc8739e42dea
   
 
  
