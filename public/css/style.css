@@ -1536,8 +1536,8 @@ col-2{
 
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
-    20%, 40%, 60%, 80% { transform: translateX(3px); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
 .shakeEffect {
@@ -1547,7 +1547,7 @@ col-2{
     font-size: 1.4rem;
     padding: 1.6rem 2rem;
     border-radius: 2.1rem;
-    animation: shake 4s ease infinite; /* Adjust the animation duration and timing function as needed */
+    animation: shake 1s ease infinite; /* Adjust the animation duration and timing function as needed */
 
 
 }

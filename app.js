@@ -1,57 +1,43 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const path = require ('path');/////////////
-
-
-
-
-
+const path = require('path');
 
 const app = express();
-
-
-
-
 
 // Middleware to parse incoming form data
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname,'public'))) /////////////////
+app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve the English version by default
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/index_en.html'));
+});
 
-app.get('/', (req, res) => {                           ///////////////////
-  res.sendFile(path.join(__dirname+'/index.html'));     ///////////////////
-  //__dirname : It will resolve to your project folder.
-})
 // Define a route to handle form submissions
-
 app.post('/submit_form', (req, res) => {
   // Extract form data from the request
-  const { activity, firstName, lastName, email, description } = req.body;
+  const { lang, activity, firstName, lastName, email, description } = req.body;
 
   // Create a transporter object to send emails
   const transporter = nodemailer.createTransport({
     // Replace these with your SMTP settings
-
-
-    host: 'kjkjkjkjkjkjkjkjkj',
+    host: 'your_smtp_host',
     port: 587,
     secure: false,
     auth: {
-      user: 'ssssssssss',
-      pass: 'mmmmmmmmm',
+      user: 'your_smtp_username',
+      pass: 'your_smtp_password',
     },
-
-    
   });
 
   // Set up the email data
   const mailOptions = {
-    from: 'saeed.zakeri1364@gmail.com',
-    to: 'saeed.zakeri1364@gmail.com', // Replace with the recipient's email address
-    subject: `New Form Submission: ${activity}`,
+    from: 'your_sender_email@example.com',
+    to: 'your_recipient_email@example.com', // Replace with the recipient's email address
+    subject: `New Form Submission (${lang}): ${activity}`,
     text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nDescription: ${description}`,
   };
 
