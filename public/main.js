@@ -283,3 +283,20 @@ function switchLanguage(language) {
     langSelect.addEventListener("change", changeLanguage);
   };
 
+
+  const link = document.querySelector('.shakeLink');
+
+  function addShakeEffect() {
+      link.classList.add('shakeEffect');
+      setTimeout(() => {
+          link.classList.remove('shakeEffect');
+      }, 500); // Remove the class after 0.5 seconds (500 milliseconds)
+  }
+  
+  function startShaking() {
+      setInterval(addShakeEffect, 2000); // Repeat every 2 seconds (2000 milliseconds)
+  }
+  
+  // Start shaking when the page is loaded or when required.
+  startShaking();
+  
