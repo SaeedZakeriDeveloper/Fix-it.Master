@@ -19,16 +19,25 @@
                 <a href="#home"><img src="img/fulllogo__2_-removebg-preview.png " alt="logo"
                         style=" width: 7rem ;height : 5rem;"></a>
             </div>
+            <div class="container">
+                <select id="langSelect">
+                    <option value="" disabled selected>language</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+
+
             <i class="fas fa-bars menu-bar"></i>
             <nav>
                 <ul>
-                    <li><a href="#home" class="active">home</a></li>
-                    <li><a href="#services">services</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#reviews">reviews</a></li>
-                    <li><a href="#pricing">pricing</a></li>
-                    <li><a href="#news">news</a></li>
-                    <li><a href="#contact">contact us</a></li>
+                    <li><a href="#" data-lang="home">Home</a></li>
+                    <li><a href="#services" data-lang="services">services</a></li>
+                    <li><a href="#about" data-lang="about">about</a></li>
+                    <li><a href="#reviews" data-lang="reviews">reviews</a></li>
+                    <li><a href="#pricing" data-lang="pricing">pricing</a></li>
+                    <li><a href="#news" data-lang="news">news</a></li>
+                    <li><a href="#contact" data-lang="contact">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,22 +57,14 @@
 
 
                 <div style="margin-top: 2rem; padding: 1rem;" class="icon-div">
-                    <img src="./img//home-service1.png" alt=""
-                    style="width: 7rem; height: 7rem ;margin: 2rem ">
-                    <img src="./img//home-service2.png" alt=""
-                        style="width: 7rem; height: 7rem ;margin: 2rem  ;">
-                    <img src="./img//home-service3.png" alt=""
-                        style="width: 7rem; height: 7rem ;margin: 2rem ">
-                    <img src="./img//home-service4.png" alt=""
-                        style="width: 7rem; height: 7rem ;margin: 2rem ">
-                    <img src="./img//home-service5.png" alt=""
-                        style="width: 7rem; height: 7rem ;margin: 2rem ">
-                    <img src="./img//home-service6.png" alt=""
-                        style="width: 7rem; height: 7rem ;margin: 2rem ">
-                    <img src="./img//home-service7.png" alt=""
-                        style="width: 7rem; height: 7rem ;margin: 2rem ">
-                    <img src="./img//home-service8.png" alt=""
-                        style="width: 7rem; height: 7rem ;margin: 2rem ">
+                    <img src="./img//home-service1.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem ">
+                    <img src="./img//home-service2.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem  ;">
+                    <img src="./img//home-service3.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem ">
+                    <img src="./img//home-service4.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem ">
+                    <img src="./img//home-service5.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem ">
+                    <img src="./img//home-service6.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem ">
+                    <img src="./img//home-service7.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem ">
+                    <img src="./img//home-service8.png" alt="" style="width: 7rem; height: 7rem ;margin: 2rem ">
                 </div>
 
 
@@ -84,7 +85,8 @@
 
 
                     <div class="containerAnimation">
-                        <img src="./img/1Skype_Picture_2023_08_02T00_20_39_774Z.jpeg" alt="Your Image" style="width: 100% ; height:100% ; margin-top: 10px;">
+                        <img src="./img/1Skype_Picture_2023_08_02T00_20_39_774Z.jpeg" alt="Your Image"
+                            style="width: 100% ; height:100% ; margin-top: 10px;">
                     </div>
 
 
@@ -96,7 +98,7 @@
                     <img src="./img/1Skype_Picture_2023_08_02T00_20_39_774Z.jpeg" 
                         alt="">
                 </div> -->
-                
+
                 <p>Keep your home in perfect harmony with our comprehensive General Maintenance services. From routine
                     inspections and repairs to fixing plumbing, electrical, and HVAC issues, our skilled professionals
                     ensure your property remains in top-notch condition, providing you with peace of mind and a
@@ -115,7 +117,8 @@
                     <!-- <h4>Transform Your Home with Our Residential Services</h4> -->
                 </div>
                 <div class="containerAnimation1">
-                    <img src="./img/Skype_Picture_2023_08_02T00_21_12_029Z.jpeg" alt="Your Image" style="width: 100% ; height:100% ; margin-top: 10px;">
+                    <img src="./img/Skype_Picture_2023_08_02T00_21_12_029Z.jpeg" alt="Your Image"
+                        style="width: 100% ; height:100% ; margin-top: 10px;">
                 </div>
 
                 <!-- <div class="serv-img">
@@ -140,7 +143,7 @@
         <div class="video-container">
             <video src="./img/videoBlack&White.mp4" autoplay loop muted></video>
             <div class="text-animation">
-                <h3 style="color: #c1542d; ;" >Your Home, Our Expertise: Unleashing the Power of Service</h3>
+                <h3 style="color: #c1542d; ;">Your Home, Our Expertise: Unleashing the Power of Service</h3>
             </div>
         </div>
 
@@ -394,7 +397,7 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.819089123944!2d35.50171853544536!3d33.89431279999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f16e142563ebb%3A0xad8fa77b2ab4eb91!2sRegus%20-%20Beirut%20Azariyah!5e0!3m2!1sen!2slb!4v1657562790790!5m2!1sen!2slb"
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-                    <div style="width: 100%  " ><iframe width="100%" height="400" frameborder="0" scrolling="no" 
+                    <div style="width: 100%  "><iframe width="100%" height="400" frameborder="0" scrolling="no"
                             marginheight="0" marginwidth="0"
                             src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=France%20Strasbourg+(Home%20Service)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
                                 href="https://www.maps.ie/population/">Population calculator map</a></iframe></div>
@@ -506,7 +509,7 @@
 
 
     <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+    <script src="./main.js"></script>
 
 
 
