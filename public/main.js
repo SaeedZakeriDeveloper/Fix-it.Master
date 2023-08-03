@@ -81,21 +81,18 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Function to open the modal (show the form)
-// Function to open the modal (show the form)
+
 function openModal() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "block";
   }
   
   
-  // Function to close the modal (hide the form)
   function closeModal() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "none";
   }
   
-  // Attach event listener to the "Request" button to open the modal
   document.querySelector(".btn").addEventListener("click", openModal);
   
   // Function to show the form with a slide-down animation
@@ -126,31 +123,17 @@ function showFormWithSlideDown() {
     var email = document.getElementById("email").value;
     var description = document.getElementById("description").value;
   
-    // You can now process the form data, for example, send it to your email or server.
-    // You can use AJAX or a form submission library to handle the form data.
+ 
   
     // After form submission, you can close the modal or show a success message to the user.
     closeModal(); // Example: Close the modal after form submission.
   });
 
 
+
+
   
 
-//   const langSelect = document.getElementById('langSelect');
-//   langSelect.addEventListener('change', () => {
-//     const selectedLang = langSelect.value;
-//     // Replace 'your_server_url' with the URL where your API is hosted (e.g., 'http://localhost:3000')
-//     fetch('your_server_url/submit_form', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({ lang: selectedLang }),
-//     })
-//     .then(response => response.text())
-//     .then(data => console.log(data))
-//     .catch(error => console.error(error));
-//   });
 
  
   
