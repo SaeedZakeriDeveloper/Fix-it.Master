@@ -85,58 +85,70 @@ window.addEventListener('scroll', () => {
 function openModal() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "block";
-  }
-  
-  
-  function closeModal() {
+}
+
+
+function closeModal() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "none";
-  }
-  
-  document.querySelector(".btn").addEventListener("click", openModal);
-  
-  // Function to show the form with a slide-down animation
+}
+
+document.querySelector(".btn").addEventListener("click", openModal);
+
+// Function to show the form with a slide-down animation
 function showFormWithSlideDown() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "block";
-  }
-  
-  // Function to show the form with a slide-down animation
+}
+
+// Function to show the form with a slide-down animation
 function showFormWithSlideDown() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "block";
-  }
-  
-  // Function to close the modal (hide the form)
-  function closeModal() {
+}
+
+// Function to close the modal (hide the form)
+function closeModal() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "none";
-  }
-  
-  // Function to handle form submission
-  document.getElementById("requestForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+}
+
+// Function to handle form submission
+document.getElementById("submitButton").addEventListener("click", function (event) {
+    // event.preventDefault();
     // Get form values
     var activity = document.getElementById("activity").value;
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastName").value;
     var email = document.getElementById("email").value;
     var description = document.getElementById("description").value;
-  
- 
-  
+
+    fetch("/submit_form", {
+        method: "POST",
+        body: JSON.stringify({
+            activity,
+            firstName,
+            lastName,
+            email,
+            description
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+
     // After form submission, you can close the modal or show a success message to the user.
     closeModal(); // Example: Close the modal after form submission.
-  });
+});
 
 
 
 
-  
 
 
- 
-  
+
+
+
 
 
 
@@ -173,28 +185,27 @@ function showFormWithSlideDown() {
 //           link.classList.remove('shakeEffect');
 //       }, 500); // Remove the class after 0.5 seconds (500 milliseconds)
 //   }
-  
+
 //   function startShaking() {
 //       setInterval(addShakeEffect, 2000); // Repeat every 2 seconds (2000 milliseconds)
 //   }
-  
-  // Start shaking when the page is loaded or when required.
-  startShaking();
 
-  function changeLanguage() {
-    let element=document.getElementById("langBtn");
-    let className=element.getAttribute("class");
-    if(className == 'franceBtn'){
-        document.getElementById("langBtn").classList.remove('franceBtn');
-        document.getElementById("langBtn").classList.add('unitedBtn'); 
-       // window.location.href = "index_en.html";
-    }
-    else if(className == 'unitedBtn'){
-        document.getElementById("langBtn").classList.remove('unitedBtn');
-        document.getElementById("langBtn").classList.add('franceBtn'); 
-       // window.location.href = "index_fr.html";
-    }
-  }
-  
+// Start shaking when the page is loaded or when required.
+startShaking();
 
- 
+function changeLanguage() {
+    let element = document.getElementById("langBtn");
+    let className = element.getAttribute("class");
+    if (className == 'franceBtn') {
+        element.classList.remove('franceBtn');
+        element.classList.add('unitedBtn');
+        window.location.href = "index.html";
+    }
+    else if (className == 'unitedBtn') {
+        element.classList.remove('unitedBtn');
+        element.classList.add('franceBtn');
+        window.location.href = "index_en.html";
+    }
+}
+
+
