@@ -20,9 +20,13 @@ app.use(
   })
 );
 
+
+
 /*app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/index_fr.html'));
 });*/
+
+
 
 app.post('/submit_form',(req, res) => {
   const body = req.body;
@@ -61,5 +65,4 @@ app.listen(port, () => {
 
 
 
-///////////////////
 
