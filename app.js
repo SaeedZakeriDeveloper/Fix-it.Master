@@ -13,13 +13,13 @@ const nodemailer = require('nodemailer');
 
 
 const transporter = nodemailer.createTransport(
-  smtpTransport({
-    service: 'SendGrid',
+  {
+    service: 'gmail',
     auth: {
       user: process.env.FROM_EMAIL_ADDRESS, // Set this as an environment variable in Netlify
       pass: process.env.FROM_EMAIL_PASSWORD, // Set this as an environment variable in Netlify
     },
-  })
+  }
  );
 
 
