@@ -9,15 +9,20 @@ var transporter = nodemailer.createTransport({
   }
 });
 
+
+
+
 // const transporter = nodemailer.createTransport(
-//   {
-//     service: 'gmail',
+//   smtpTransport({
+//     service: 'SendGrid',
 //     auth: {
-//       user: process.env.FROM_EMAIL_ADDRESS, // Set this as an environment variable in Netlify
-//       pass: process.env.FROM_EMAIL_PASSWORD, // Set this as an environment variable in Netlify
+//       user: process.env.SENDGRID_USERNAME, // Set this as an environment variable in Netlify
+//       pass: process.env.SENDGRID_PASSWORD, // Set this as an environment variable in Netlify
 //     },
-//   }
-//  );
+//   })
+///// );
+
+
 
 const express = require('express');
 const path = require('path');
@@ -50,13 +55,6 @@ app.post('/submit_form',(req, res) => {
 
 
 
-  // var mailOptions = {
-  //   from: process.env.FROM_EMAIL_ADDRESS,
-  //   to: process.env.TO_EMAIL_ADDRESS,
-  //   subject: 'Sending Email using Node.js',
-  //   text: 'That was easy!'
-  // };
-
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
     to: 's.zaker115599@gmail.com',
@@ -88,8 +86,3 @@ const port = process.env.PORT || 80;
 app.listen(port, () => {
   console.log(`Server started on ${port}`);
 });
-
-
-
-
-
