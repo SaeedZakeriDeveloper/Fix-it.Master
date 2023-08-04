@@ -149,6 +149,7 @@ document.getElementById("submitButton").addEventListener("click", function (even
 
     // After form submission, you can close the modal or show a success message to the user.
     closeModal(); // Example: Close the modal after form submission.
+    
 });
 
 
