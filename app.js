@@ -1,28 +1,23 @@
 const nodemailer = require('nodemailer');
 // const smtpTransport = require('nodemailer-smtp-transport');
 
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'fixitmaster12@gmail.com',
-//     pass: 'anbbumywwtjenkap'
-//   }
-// });
-
-
-
-
-const transporter = nodemailer.createTransport(
-  {
-    service: 'gmail',
-    auth: {
-      user: process.env.FROM_EMAIL_ADDRESS, // Set this as an environment variable in Netlify
-      pass: process.env.FROM_EMAIL_PASSWORD, // Set this as an environment variable in Netlify
-    },
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'fixitmaster12@gmail.com',
+    pass: 'anbbumywwtjenkap'
   }
- );
+});
 
-
+// const transporter = nodemailer.createTransport(
+//   {
+//     service: 'gmail',
+//     auth: {
+//       user: process.env.FROM_EMAIL_ADDRESS, // Set this as an environment variable in Netlify
+//       pass: process.env.FROM_EMAIL_PASSWORD, // Set this as an environment variable in Netlify
+//     },
+//   }
+//  );
 
 const express = require('express');
 const path = require('path');
@@ -55,9 +50,16 @@ app.post('/submit_form',(req, res) => {
 
 
 
+  // var mailOptions = {
+  //   from: process.env.FROM_EMAIL_ADDRESS,
+  //   to: process.env.TO_EMAIL_ADDRESS,
+  //   subject: 'Sending Email using Node.js',
+  //   text: 'That was easy!'
+  // };
+
   var mailOptions = {
-    from: process.env.FROM_EMAIL_ADDRESS,
-    to: process.env.TO_EMAIL_ADDRESS,
+    from: 'fixitmaster12@gmail.com',
+    to: 's.zaker115599@gmail.com',
     subject: 'Sending Email using Node.js',
     text: 'That was easy!'
   };
