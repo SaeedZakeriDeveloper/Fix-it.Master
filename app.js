@@ -1,19 +1,30 @@
 const nodemailer = require('nodemailer');
+const smtpTransport = require('nodemailer-smtp-transport');
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'fixitmaster12@gmail.com',
-    pass: 'anbbumywwtjenkap'
-  }
-});
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'fixitmaster12@gmail.com',
+//     pass: 'anbbumywwtjenkap'
+//   }
+// });
+
+const transporter = nodemailer.createTransport(
+  smtpTransport({
+    service: 'SendGrid',
+    auth: {
+      user: process.env.SENDGRID_USERNAME, // Set this as an environment variable in Netlify
+      pass: process.env.SENDGRID_PASSWORD, // Set this as an environment variable in Netlify
+    },
+  })
+);
+
+
 
 const express = require('express');
 const path = require('path');
 const app = express();
-
 app.use(express.json());
-
 app.use(
   express.urlencoded({
     extended: true,
@@ -35,8 +46,11 @@ app.post('/submit_form',(req, res) => {
   const lastName = body.lastName;
   const email = body.email;
   const description = body.description;
-
   console.log(activity, firstName, lastName, email, description);
+
+
+
+
 
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
@@ -44,6 +58,8 @@ app.post('/submit_form',(req, res) => {
     subject: 'Sending Email using Node.js',
     text: 'That was easy!'
   };
+
+
 
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
@@ -54,6 +70,12 @@ app.post('/submit_form',(req, res) => {
   });
 
 });
+
+
+
+
+
+
 
 app.use(express.static(path.join(__dirname, 'public')))
 

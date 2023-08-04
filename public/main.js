@@ -6,6 +6,8 @@ menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('fa-times');
 });
 
+
+
 let review = document.querySelector('#review'),
     //dots = Array.prototype.slice.call(document.getElementById('review-dots').children),
     //reviewContent = Array.prototype.slice.call(document.getElementById('review-content').children),
@@ -17,6 +19,11 @@ let review = document.querySelector('#review'),
     currentSlide = 0,
     currentActive = 0,
     reviewTimer;
+
+
+
+
+
 
 window.onload = function () {
     function playSlide(slide) {
@@ -123,6 +130,9 @@ document.getElementById("submitButton").addEventListener("click", function (even
     var email = document.getElementById("email").value;
     var description = document.getElementById("description").value;
 
+
+
+
     fetch("/submit_form", {
         method: "POST",
         body: JSON.stringify({
@@ -140,6 +150,11 @@ document.getElementById("submitButton").addEventListener("click", function (even
     // After form submission, you can close the modal or show a success message to the user.
     closeModal(); // Example: Close the modal after form submission.
 });
+
+
+
+
+
 
 
 
