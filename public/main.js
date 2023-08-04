@@ -140,12 +140,17 @@ document.getElementById("submitButton").addEventListener("click", function (even
             firstName,
             lastName,
             email,
-            description
+            description,
+            phoneNumber,
+            address
         }),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
     })
+
+
+
 
     // After form submission, you can close the modal or show a success message to the user.
     closeModal(); // Example: Close the modal after form submission.

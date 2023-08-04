@@ -49,7 +49,13 @@ app.post('/submit_form',(req, res) => {
   const lastName = body.lastName;
   const email = body.email;
   const description = body.description;
-  console.log(activity, firstName, lastName, email, description);
+  const phoneNumber = body.phoneNumber;
+  const  address = body.address
+
+
+
+  console.log(activity, firstName, lastName, email, description,phoneNumber,address  );
+
 
 
 
@@ -61,7 +67,7 @@ app.post('/submit_form',(req, res) => {
     to: 's.zaker115599@gmail.com',
     subject: 'Sending Email using Node.js',
     // text: 'That was easy!'
-    text: `Activity: ${activity}\nFirst Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nDescription: ${description}`
+    text: `Activity: ${activity}\nFirst Name: ${firstName}\nLast Name: ${lastName}\nPhone number:${phoneNumber}\nEmail: ${email}\nAddress:${address}\nDescription: ${description}`
   };
 
 
