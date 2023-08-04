@@ -1,23 +1,26 @@
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'fixitmaster12@gmail.com',
-//     pass: 'anbbumywwtjenkap'
-//   }
-// });
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'fixitmaster12@gmail.com',
+    pass: 'anbbumywwtjenkap'
+  }
+});
 
-const transporter = nodemailer.createTransport(
-  smtpTransport({
-    service: 'SendGrid',
-    auth: {
-      user: process.env.SENDGRID_USERNAME, // Set this as an environment variable in Netlify
-      pass: process.env.SENDGRID_PASSWORD, // Set this as an environment variable in Netlify
-    },
-  })
-);
+
+
+
+// const transporter = nodemailer.createTransport(
+//   smtpTransport({
+//     service: 'SendGrid',
+//     auth: {
+//       user: process.env.SENDGRID_USERNAME, // Set this as an environment variable in Netlify
+//       pass: process.env.SENDGRID_PASSWORD, // Set this as an environment variable in Netlify
+//     },
+//   })
+///// );
 
 
 
