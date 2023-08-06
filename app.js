@@ -65,8 +65,7 @@ app.post('/submit_form',(req, res) => {
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
     to: 's.zaker115599@gmail.com',
-    subject: 'Sending Email using Node.js',
-    // text: 'That was easy!'//
+    subject: 'Order Request from Fix-It-Masters',
     text: `Activity: ${activity}\nFirst Name: ${firstName}\nLast Name: ${lastName}\nPhone number:${phoneNumber}\nEmail: ${email}\nAddress:${address}\nDescription: ${description}`
   };
 
