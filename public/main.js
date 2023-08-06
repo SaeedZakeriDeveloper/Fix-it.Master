@@ -129,8 +129,8 @@ document.getElementById("submitButton").addEventListener("click", function (even
     var lastName = document.getElementById("lastName").value;
     var email = document.getElementById("email").value;
     var description = document.getElementById("description").value;
-    var description = document.getElementById("phoneNumber").value;
-    var description = document.getElementById("address").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var address = document.getElementById("address").value;
 
 
 
