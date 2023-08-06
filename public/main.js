@@ -120,9 +120,54 @@ function closeModal() {
     modal.style.display = "none";
 }
 
+
+
+
+
+
+function showSuccessMessage() {
+    var successModal = document.getElementById("successMessage");
+    successModal.style.display = "block";
+}
+
+// Function to close the success message
+function closeSuccessMessage() {
+    var successModal = document.getElementById("successMessage");
+    successModal.style.display = "none";
+}
+
+// Function to show the error message
+function showErrorMessage() {
+    var errorModal = document.getElementById("errorMessage");
+    errorModal.style.display = "block";
+}
+
+// Function to close the error message
+function closeErrorMessage() {
+    var errorModal = document.getElementById("errorMessage");
+    errorModal.style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Function to handle form submission
 document.getElementById("submitButton").addEventListener("click", function (event) {
-    // event.preventDefault();
+     event.preventDefault();
     // Get form values
     var activity = document.getElementById("activity").value;
     var firstName = document.getElementById("firstName").value;
@@ -152,7 +197,16 @@ document.getElementById("submitButton").addEventListener("click", function (even
         }
     })
 
-
+    .then(response => {
+        if (response.ok) {
+            showSuccessMessage();
+        } else {
+            showErrorMessage();
+        }
+    })
+    .catch(error => {
+        showErrorMessage();
+    });
 
 
     // After form submission, you can close the modal or show a success message to the user.

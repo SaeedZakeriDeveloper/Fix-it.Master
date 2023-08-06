@@ -77,8 +77,10 @@ app.post('/submit_form',(req, res) => {
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
       console.log(error);
+      res.status(500).send("Failed to send the message. Please try again later.");
     } else {
       console.log('Email sent: ' + info.response);
+      res.status(200).send("Message sent successfully!");
     }
   });
 

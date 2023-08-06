@@ -402,6 +402,21 @@
             </form>
         </div>
     </div>
+    <div id="successMessage" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSuccessMessage()">&times;</span>
+            <h3 style="color: green;">Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. Your message has been sent successfully.</p>
+        </div>
+    </div>
+    
+    <div id="errorMessage" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeErrorMessage()">&times;</span>
+            <h2 style="color: red;" >Message Sending Failed!</h2>
+            <p>Sorry, there was an issue sending your message. Please try again later.</p>
+        </div>
+    </div>
     <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
