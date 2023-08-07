@@ -247,7 +247,7 @@ header .container nav ul li a:hover {
 .home {
 
     /* background-image: url("../img/imageedit_4_5723801564.png"); */
-    background-image: url("../img/pexels-ivan-samkov-5799130.jpg");
+    background-image: url("../img/Main-image-First-page-painting.jpg");
 
     height: 102vh;
     background-repeat: no-repeat;
@@ -259,7 +259,7 @@ header .container nav ul li a:hover {
 @media(max-width: 767px) {
     .home {
         /* background-image: url("../img/blur:small.png"); */
-        background-image: url("../img/pexels-ivan-samkov-5799130.jpg");
+        background-image: url("../img/Main-image-First-page-painting.jpg");
 
         background-repeat: no-repeat;
         background-size: cover;
@@ -1569,13 +1569,13 @@ col-2{
 .franceBtn {
     width: 70px;
     height: 45px;
-    background: url(../img/france_round_button_with_iso_code_256.png);
+    background: url(../img/France_language.png);
     background-size: cover;
 }
 
 .unitedBtn {
     width: 70px;
     height: 45px;
-    background: url(../img/united_kingdom_round_button_with_iso_code_256.png);
+    background: url(../img/Uk_language.png);
     background-size: cover;
 }

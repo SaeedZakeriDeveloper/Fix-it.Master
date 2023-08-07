@@ -1,5 +1,13 @@
 const menuBtn = document.querySelector('.menu-bar');
 const menu = document.querySelector('nav');
+// import tinify from 'tinify';
+// tinify.key = 'BZVYFJNckW57SzhWjKPXn6RswGYPzCWf';    //put the tinify key
+
+// const source = tinify.fromFile('Furniture Assembly.jpg');
+// source.toFile('compressed_Furniture Assembly.jpg');
+
+
+
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
