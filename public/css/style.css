@@ -631,7 +631,7 @@ header .container nav ul li a:hover {
 /* End About Section  */
 /* Start Review Section  */
 .reviews {
-    background: url(../img/bg-review.png) no-repeat;
+    background: url(../img/ReviewCustomer.png) no-repeat;
     height: 100%;
     background-position: center;
     background-size: cover;
