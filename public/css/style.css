@@ -863,6 +863,9 @@ header .container nav ul li a:hover {
 }
 
 
+
+
+
 /* End Review Section  */
 /* Start Pricing Section  */
 .pricing .container {
@@ -903,12 +906,12 @@ header .container nav ul li a:hover {
     width: 100%;
     height: 85%;
 }
-
+/* 
 @media(min-width: 1200px) {
     .pricing .container .pricing-container .price-box:nth-child(2) {
         transform: translateY(1rem) scale(1.1);
     }
-}
+} */
 
 .pricing .pricing-container .price-box h3 {
     position: relative;
@@ -960,6 +963,22 @@ header .container nav ul li a:hover {
 .pricing .pricing-container .price-box p span {
     color: var(--blueColor);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* End Pricing Section  */
 /* Start News Section  */
