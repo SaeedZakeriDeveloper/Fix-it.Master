@@ -1,10 +1,11 @@
 const menuBtn = document.querySelector('.menu-bar');
 const menu = document.querySelector('nav');
 // import tinify from 'tinify';
+
 // tinify.key = 'BZVYFJNckW57SzhWjKPXn6RswGYPzCWf';    //put the tinify key
 
 // const source = tinify.fromFile('Furniture Assembly.jpg');
-// source.toFile('compressed_Furniture Assembly.jpg');
+// source.toFile('./img/compressed_Furniture Assembly.jpg');
 
 
 
@@ -296,3 +297,7 @@ function changeLanguage() {
 
 
 ////////////////////////////saeeddddddd
+
+
+// const source = tinify.fromFile('Furniture Assembly.jpg');
+// source.toFile('compressed_Furniture Assembly.jpg');
