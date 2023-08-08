@@ -862,12 +862,6 @@ header .container nav ul li a:hover {
     }
 }
 
-
-
-
-
-/* End Review Section  */
-/* Start Pricing Section  */
 .pricing .container {
     text-align: center;
 }
@@ -885,33 +879,17 @@ header .container nav ul li a:hover {
 
 .pricing .container .pricing-container .price-box {
     position: relative;
-    background-color:#202020 ;
+    background-color: #202020;
     padding: 2.7rem 0;
     border: 2px solid #c1542d;
     border-radius: .5rem;
     cursor: pointer;
-    box-shadow: 0 0.2rem 0.2rem -0.1rem rgb(0 0 0 / 30%),
-        .2rem 0rem 4rem 1rem rgb(0 0 0 / 10%);
+    transition: transform 0.2s ease;
 }
 
-.pricing .pricing-container .price-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* background: linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 232, 36, 1) 100%); */
+.pricing .container .pricing-container .price-box:hover {
+    transform: scale(1.05); /* Scale the pricing box on hover */
 }
-
-.pricing .pricing-container .price-box:hover::before {
-    width: 100%;
-    height: 85%;
-}
-/* 
-@media(min-width: 1200px) {
-    .pricing .container .pricing-container .price-box:nth-child(2) {
-        transform: translateY(1rem) scale(1.1);
-    }
-} */
 
 .pricing .pricing-container .price-box h3 {
     position: relative;
@@ -921,64 +899,22 @@ header .container nav ul li a:hover {
     padding-bottom: 2.7rem;
 }
 
-.pricing .pricing-container .price-box .price {
-    position: relative;
-    padding: 2.5rem 0;
-    font-size: 11.9rem;
-    font-weight: 600;
-    color: var(--blueColor);
-    /* border-top: 1px solid #f5f5f5;
-    border-bottom: 1px solid #f5f5f5; */
-}
-
-.pricing .pricing-container .price-box .price span {
-    font-size: 2.4rem;
-    color: var(--textColor);
-    position: absolute;
-}
-
-.pricing .pricing-container .price-box .price span:first-child {
-    left: 28%;
-}
-
-.pricing .pricing-container .price-box .price span:nth-child(2) {
-    right: 27%;
-}
-
-.pricing .pricing-container .price-box .price p {
-
-    font-size: 1.6rem;
-    text-transform: capitalize;
-    margin: 0 auto;
-}
-
 .pricing .pricing-container .price-box p {
     position: relative;
     font-size: 1.7rem;
-    color:#ffffff ;
+    color: #ffffff;
     max-width: 22.6rem;
     margin: 2.4rem auto;
 }
 
-.pricing .pricing-container .price-box p span {
-    color: var(--blueColor);
+/* Responsive animation for smaller screens */
+@media only screen and (max-width: 370px) {
+
+    .pricing .container .pricing-container .price-box:hover {
+        transform: scale(1); /* Set scaling to 1 on hover for smaller screens (no scaling) */
+        transition: none; /* Remove transition effect for smoother scaling on smaller screens */
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* End Pricing Section  */
 /* Start News Section  */
@@ -1034,8 +970,15 @@ header .container nav ul li a:hover {
     transform: scaleX(1.1);
 }
 
+
+
+
+
+
 /* End News Section  */
 /* Start Contact Section  */
+
+
 .contact .container {
     text-align: center;
 }
@@ -1091,6 +1034,16 @@ header .container nav ul li a:hover {
         flex-direction: row;
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 /* End Contact Section  */
 /* Start Footer Section  */
