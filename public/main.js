@@ -201,19 +201,12 @@ document.getElementById("submitButton").addEventListener("click", function (even
             "Content-type": "application/json; charset=UTF-8"
         }
     })
-    .then(() => {
-       
-    })
-    .catch(error =>{
-
-    })
+  
 
     .then(response => {
-        if (response.ok) {
-            showSuccessMessage();
-        } else {
-            showErrorMessage();
-        }
+
+    showSuccessMessage();
+        
     })
     .catch(error => {
         showErrorMessage();
@@ -222,12 +215,7 @@ document.getElementById("submitButton").addEventListener("click", function (even
 
     // After form submission, you can close the modal or show a success message to the user.
     closeModal(); // Example: Close the modal after form submission.
-    sweetAlert('error', "Enter A valid email please", 'error');
 });
-
-function validateForm(){
-    return true;
-}
 
 
 
