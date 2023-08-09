@@ -11,19 +11,6 @@ var transporter = nodemailer.createTransport({
 
 
 
-
-// const transporter = nodemailer.createTransport(
-//   smtpTransport({
-//     service: 'SendGrid',
-//     auth: {
-//       user: process.env.SENDGRID_USERNAME, // Set this as an environment variable in Netlify
-//       pass: process.env.SENDGRID_PASSWORD, // Set this as an environment variable in Netlify
-//     },
-//   })
-///// );
-
-
-
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -36,9 +23,6 @@ app.use(
 
 
 
-/*app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/index_fr.html'));
-});*/
 
 
 
