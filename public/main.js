@@ -186,10 +186,6 @@ document.getElementById("submitButton").addEventListener("click", function (even
     var phoneNumber = document.getElementById("phoneNumber").value;
     var address = document.getElementById("address").value;
 
-
-
-
-
     fetch("/submit_form", {
         method: "POST",
         body: JSON.stringify({
@@ -204,6 +200,12 @@ document.getElementById("submitButton").addEventListener("click", function (even
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
+    })
+    .then(() => {
+       
+    })
+    .catch(error =>{
+
     })
 
     .then(response => {
@@ -220,8 +222,12 @@ document.getElementById("submitButton").addEventListener("click", function (even
 
     // After form submission, you can close the modal or show a success message to the user.
     closeModal(); // Example: Close the modal after form submission.
-    
+    sweetAlert('error', "Enter A valid email please", 'error');
 });
+
+function validateForm(){
+    return true;
+}
 
 
 

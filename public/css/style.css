@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@
     outline: none;
     transition: all .3s ease-in-out;
 }
-
 
 
 :root {
@@ -29,7 +27,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: #202020;
 }
 
@@ -68,7 +66,7 @@ h2 {
     font-weight: 400;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     h2 {
         font-size: 3.3rem;
     }
@@ -85,7 +83,7 @@ p {
     color: var(--textColor);
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     p {
         font-size: 2rem;
     }
@@ -118,35 +116,35 @@ section {
 }
 
 /*Small Screen*/
-@media(min-width: 576px) {
+@media (min-width: 576px) {
     .container {
         width: 540px;
     }
 }
 
 /*Medium Screen*/
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .container {
         width: 750px;
     }
 }
 
 /*Large Screen*/
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     .container {
         width: 960px;
     }
 }
 
 /*X-Large Screen*/
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
     .container {
         width: 1170px;
     }
 }
 
 /*XX-Large Screen*/
-@media(min-width: 1400px) {
+@media (min-width: 1400px) {
     .container {
         width: 1320px;
     }
@@ -170,7 +168,7 @@ header .container {
     justify-content: space-between;
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
     header .container {
         width: 100%;
     }
@@ -214,7 +212,7 @@ header .container nav ul li a:hover {
     color: var(--whiteColor);
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     header {
         padding: 0;
     }
@@ -256,7 +254,7 @@ header .container nav ul li a:hover {
 }
 
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .home {
         /* background-image: url("../img/blur:small.png"); */
         background-image: url("../img/Main-image-First-page-painting.jpg");
@@ -304,10 +302,6 @@ header .container nav ul li a:hover {
 } */
 
 
-
-
-
-
 .home .container {
     /* background-color: #f4faff; */
     height: 100vh;
@@ -321,8 +315,16 @@ header .container nav ul li a:hover {
     justify-content: center;
 }
 
-.home .container .home-text {
+/*.home .container .home-text {*/
+/*    text-align: center;*/
+/*}*/
+.home .container .home-text, .price-box {
     text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .home .container .home-text h2 {
@@ -338,12 +340,11 @@ header .container nav ul li a:hover {
     margin: 3rem 0;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .home .container .home-text h1 {
         font-size: 3rem;
     }
 }
-
 
 
 .home .container .home-text p {
@@ -355,7 +356,7 @@ header .container nav ul li a:hover {
     display: none;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .home .container {
         justify-content: flex-start;
     }
@@ -373,7 +374,7 @@ header .container nav ul li a:hover {
     }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     .home .container .home-img {
         display: flex;
     }
@@ -383,13 +384,13 @@ header .container nav ul li a:hover {
     }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
     .home {
         padding-top: 12rem;
     }
 }
 
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
     .home {
         padding-top: 8rem;
     }
@@ -473,7 +474,7 @@ header .container nav ul li a:hover {
     display: none;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .services .container .serv-box .list {
         display: flex;
         gap: 2rem;
@@ -492,7 +493,7 @@ header .container nav ul li a:hover {
     .services .like {
         position: absolute;
         bottom: -80px;
-        left: calc(50% - 15rem/2);
+        left: calc(50% - 15rem / 2);
         width: 15rem;
         height: 15rem;
         border-radius: 50%;
@@ -509,13 +510,13 @@ header .container nav ul li a:hover {
     }
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     .services .container .serv-box .list {
         justify-content: space-between;
     }
 }
 
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
     .services .container .serv-box .list {
         display: flex;
         justify-content: space-between;
@@ -552,7 +553,7 @@ header .container nav ul li a:hover {
     }
 }
 
-@media(min-width: 1400px) {
+@media (min-width: 1400px) {
     .services .container .serv-box:nth-child(2) .list {
         padding-left: 11rem;
     }
@@ -856,7 +857,7 @@ header .container nav ul li a:hover {
     }
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .reviews .arrow {
         font-size: 2rem;
     }
@@ -866,7 +867,7 @@ header .container nav ul li a:hover {
     text-align: center;
 }
 
-.pricing .container>p {
+.pricing .container > p {
     max-width: 67.4rem;
     margin: 5rem auto;
 }
@@ -907,6 +908,16 @@ header .container nav ul li a:hover {
     margin: 2.4rem auto;
 }
 
+.pricing .pricing-container .price-box > h3 {
+    height: 77px;
+    overflow: hidden;
+}
+
+.pricing .pricing-container .price-box > p:nth-child(2) {
+    height: 160px;
+    overflow: hidden;
+}
+
 /* Responsive animation for smaller screens */
 @media only screen and (max-width: 370px) {
 
@@ -922,7 +933,7 @@ header .container nav ul li a:hover {
     text-align: center;
 }
 
-.news .container>p {
+.news .container > p {
     max-width: 67.4rem;
     margin: 5rem auto;
     text-align: center;
@@ -969,10 +980,6 @@ header .container nav ul li a:hover {
     text-decoration: none;
     transform: scaleX(1.1);
 }
-
-
-
-
 
 
 /* End News Section  */
@@ -1029,20 +1036,11 @@ header .container nav ul li a:hover {
     cursor: pointer;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .contact .container .contact-container {
         flex-direction: row;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 /* End Contact Section  */
@@ -1146,7 +1144,7 @@ footer .copyright p span {
     color: var(--blueColor);
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
 
     footer .container .box input,
     footer .container .box button {
@@ -1156,21 +1154,68 @@ footer .copyright p span {
 
 /* End Footer Section  */
 
-@media(max-width: 385px) {
-
-    /* .icon-div>img:nth-child(4),  */
-    .icon-div>img:nth-child(5) {
+@media (max-width: 385px) {
+    .icon-div > img:nth-child(5),
+    .icon-div > img:nth-child(6),
+    .icon-div > img:nth-child(7),
+    .icon-div > img:nth-child(8) {
         display: none;
     }
 }
 
+@media (min-width: 385px) {
+    .icon-div > img:nth-child(5),
+    .icon-div > img:nth-child(6),
+    .icon-div > img:nth-child(7),
+    .icon-div > img:nth-child(8) {
+        display: inline;
+    }
+}
 
+@media (min-width: 577px) {
+    .home .container .home-text {
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: unset;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+}
 
 /* @media(max-width: 375px) {
     .icon-div>img:nth-child(3){
         display: none;
     }
 } */
+
+@media (max-width: 705px) {
+    div.icon-div > img {
+        width: 11vw;
+        height: 11vw;
+    }
+}
+
+@media (min-width: 705px) {
+    div.icon-div > img {
+        width: 7vw;
+        height: 7vw;
+    }
+}
+
+@media (min-width: 1050px) {
+    div.icon-div > img {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
+@media (min-width: 1900px) {
+    div.icon-div > img {
+        width: 5vw;
+        height: 5vw;
+    }
+}
 
 .video-container {
     position: relative;
@@ -1180,7 +1225,7 @@ footer .copyright p span {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
-    
+
 }
 
 video {
@@ -1234,11 +1279,6 @@ video {
 }
 
 
-
-
-
-
-
 /* Style for the modal */
 .modal {
     display: none;
@@ -1277,7 +1317,6 @@ video {
 }
 
 
-
 /* Additional styling for the form, adjust as needed */
 .form-group {
     margin-bottom: 15px;
@@ -1306,7 +1345,6 @@ button:not(button.franceBtn,button.unitedBtn):hover {
 
 
 /* ... (your existing CSS code) ... */
-
 
 
 /* Responsive form styles */
@@ -1339,6 +1377,10 @@ button:not(button.franceBtn,button.unitedBtn):hover {
 
     .checkbox-container label {
         flex-basis: 50%;
+    }
+
+    .services .container {
+        gap: 0;
     }
 }
 
@@ -1440,13 +1482,10 @@ button[type="submit"]:hover {
     width: 75%;
 }
 
-col-2{
+col-2 {
     flex: 0 0 auto;
     width: 16.66666667%;
 }
-
-
-
 
 
 /* Set the container to take the full viewport height */
@@ -1468,8 +1507,12 @@ col-2{
 
 /* Add the animation */
 @keyframes slideout {
-    0% { left: -100%; }
-    100% { left: 0; }
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
 }
 
 /* Apply the animation to the image */
@@ -1478,12 +1521,6 @@ col-2{
     /* Keep the image visible in its final position after the animation */
     animation-fill-mode: forwards;
 }
-
-
-
-
-
-
 
 
 .containerAnimation1 {
@@ -1504,8 +1541,12 @@ col-2{
 
 /* Add the animation */
 @keyframes slideIn {
-    0% { right: -100%; }
-    100% { right: 0; }
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0;
+    }
 }
 
 /* Apply the animation to the image */
@@ -1514,7 +1555,6 @@ col-2{
     /* Keep the image visible in its final position after the animation */
     animation-fill-mode: forwards;
 }
-
 
 
 /* @keyframes shake {
@@ -1533,9 +1573,6 @@ col-2{
     /* animation: shake 1s ease infinite;  */
 
 }
-
-
-
 
 
 .franceBtn {
