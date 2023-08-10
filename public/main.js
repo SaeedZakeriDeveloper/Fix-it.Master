@@ -99,6 +99,16 @@ window.addEventListener('scroll', () => {
 
 
 function openModal() {
+    var list = ['activity', 'firstName', 'lastName', 'email', 'description', 'phoneNumber', 'address'];
+    var invalidEmailBox = document.getElementById('invalidEmailBox');
+
+    list.forEach(x => {
+        var element = document.getElementById(x);
+        element.value = '';
+        element.className = '';
+        element.placeholder = '';
+        invalidEmailBox.style.visibility = 'hidden';
+    })
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "block";
 }
@@ -159,24 +169,9 @@ function closeErrorMessage() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Function to handle form submission
 document.getElementById("submitButton").addEventListener("click", function (event) {
-     event.preventDefault();
+    event.preventDefault();
     // Get form values
     var activity = document.getElementById("activity").value;
     var firstName = document.getElementById("firstName").value;
@@ -185,37 +180,76 @@ document.getElementById("submitButton").addEventListener("click", function (even
     var description = document.getElementById("description").value;
     var phoneNumber = document.getElementById("phoneNumber").value;
     var address = document.getElementById("address").value;
+    var list = ['firstName', 'lastName', 'email', 'description', 'phoneNumber', 'address'];
 
-    fetch("/submit_form", {
-        method: "POST",
-        body: JSON.stringify({
-            activity,
-            firstName,
-            lastName,
-            email,
-            description,
-            phoneNumber,
-            address
-        }),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        }
+    var result = 0;
+
+    list.forEach(x => {
+        result += checkValidation(x);
     })
-  
+    if (result == list.length) {
+        fetch("/submit_form", {
+            method: "POST",
+            body: JSON.stringify({
+                activity,
+                firstName,
+                lastName,
+                email,
+                description,
+                phoneNumber,
+                address
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+            .then(response => {
+                showSuccessMessage();
+            })
+            .catch(error => {
+                showErrorMessage();
+            });
 
-    .then(response => {
+        // After form submission, you can close the modal or show a success message to the user.
+        closeModal(); // Example: Close the modal after form submission.
+    }
 
-    showSuccessMessage();
-        
-    })
-    .catch(error => {
-        showErrorMessage();
-    });
-
-
-    // After form submission, you can close the modal or show a success message to the user.
-    closeModal(); // Example: Close the modal after form submission.
 });
+
+function checkValidation(id) {
+    var element = document.getElementById(id);
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (id == 'email') {
+        var invalidEmailBox = document.getElementById('invalidEmailBox');
+        if (element.value != '' && !element.value.match(validRegex)) {
+            element.className = 'invalid';
+            invalidEmailBox.style.visibility = 'visible';
+            return 0;
+        }
+        else if (element.value != '' && element.value.match(validRegex)) {
+            element.className = 'valid';
+            invalidEmailBox.style.visibility = 'hidden';
+            return 1;
+        }
+        else if (element.value == '') {
+            invalidEmailBox.style.visibility = 'hidden';
+            element.className = 'invalid';
+            element.placeholder = 'required';
+            return 0;
+        }
+    }
+    else if (element.value == '') {
+        element.className = 'invalid';
+        element.placeholder = 'required';
+        return 0;
+    }
+    else {
+        element.className = 'valid';
+        element.placeholder = '';
+        return 1;
+    }
+}
 
 function changeLanguage() {
     let element = document.getElementById("langBtn");

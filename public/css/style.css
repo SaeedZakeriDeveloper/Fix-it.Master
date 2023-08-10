@@ -282,7 +282,8 @@ header .container nav ul li a:hover {
 /*.home .container .home-text {*/
 /*    text-align: center;*/
 /*}*/
-.home .container .home-text, .price-box {
+.home .container .home-text,
+.price-box {
     text-align: center;
     height: 100%;
     display: flex;
@@ -831,7 +832,7 @@ header .container nav ul li a:hover {
     text-align: center;
 }
 
-.pricing .container > p {
+.pricing .container>p {
     max-width: 67.4rem;
     margin: 5rem auto;
 }
@@ -853,7 +854,8 @@ header .container nav ul li a:hover {
 }
 
 .pricing .container .pricing-container .price-box:hover {
-    transform: scale(1.05); /* Scale the pricing box on hover */
+    transform: scale(1.05);
+    /* Scale the pricing box on hover */
 }
 
 .pricing .pricing-container .price-box h3 {
@@ -872,12 +874,12 @@ header .container nav ul li a:hover {
     margin: 2.4rem auto;
 }
 
-.pricing .pricing-container .price-box > h3 {
+.pricing .pricing-container .price-box>h3 {
     height: 77px;
     overflow: hidden;
 }
 
-.pricing .pricing-container .price-box > p:nth-child(2) {
+.pricing .pricing-container .price-box>p:nth-child(2) {
     height: 160px;
     overflow: hidden;
 }
@@ -886,8 +888,10 @@ header .container nav ul li a:hover {
 @media only screen and (max-width: 370px) {
 
     .pricing .container .pricing-container .price-box:hover {
-        transform: scale(1); /* Set scaling to 1 on hover for smaller screens (no scaling) */
-        transition: none; /* Remove transition effect for smoother scaling on smaller screens */
+        transform: scale(1);
+        /* Set scaling to 1 on hover for smaller screens (no scaling) */
+        transition: none;
+        /* Remove transition effect for smoother scaling on smaller screens */
     }
 }
 
@@ -897,7 +901,7 @@ header .container nav ul li a:hover {
     text-align: center;
 }
 
-.news .container > p {
+.news .container>p {
     max-width: 67.4rem;
     margin: 5rem auto;
     text-align: center;
@@ -1119,19 +1123,21 @@ footer .copyright p span {
 /* End Footer Section  */
 
 @media (max-width: 385px) {
-    .icon-div > img:nth-child(5),
-    .icon-div > img:nth-child(6),
-    .icon-div > img:nth-child(7),
-    .icon-div > img:nth-child(8) {
+
+    .icon-div>img:nth-child(5),
+    .icon-div>img:nth-child(6),
+    .icon-div>img:nth-child(7),
+    .icon-div>img:nth-child(8) {
         display: none;
     }
 }
 
 @media (min-width: 385px) {
-    .icon-div > img:nth-child(5),
-    .icon-div > img:nth-child(6),
-    .icon-div > img:nth-child(7),
-    .icon-div > img:nth-child(8) {
+
+    .icon-div>img:nth-child(5),
+    .icon-div>img:nth-child(6),
+    .icon-div>img:nth-child(7),
+    .icon-div>img:nth-child(8) {
         display: inline;
     }
 }
@@ -1154,28 +1160,28 @@ footer .copyright p span {
 } */
 
 @media (max-width: 705px) {
-    div.icon-div > img {
+    div.icon-div>img {
         width: 11vw;
         height: 11vw;
     }
 }
 
 @media (min-width: 705px) {
-    div.icon-div > img {
+    div.icon-div>img {
         width: 7vw;
         height: 7vw;
     }
 }
 
 @media (min-width: 1050px) {
-    div.icon-div > img {
+    div.icon-div>img {
         width: 6vw;
         height: 6vw;
     }
 }
 
 @media (min-width: 1900px) {
-    div.icon-div > img {
+    div.icon-div>img {
         width: 5vw;
         height: 5vw;
     }
@@ -1291,7 +1297,7 @@ button {
     cursor: pointer;
 }
 
-button:not(button.franceBtn,button.unitedBtn):hover {
+button:not(button.franceBtn, button.unitedBtn):hover {
     background-color: #45a049;
 }
 
@@ -1422,7 +1428,8 @@ select {
 }
 
 button[type="submit"] {
-    background-color: #c1542d;;
+    background-color: #c1542d;
+    ;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -1480,6 +1487,7 @@ col-2 {
     0% {
         left: -100%;
     }
+
     100% {
         left: 0;
     }
@@ -1514,6 +1522,7 @@ col-2 {
     0% {
         right: -100%;
     }
+
     100% {
         right: 0;
     }
@@ -1545,9 +1554,26 @@ col-2 {
 
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-    20%, 40%, 60%, 80% { transform: translateX(2px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-2px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(2px);
+    }
 }
 
 .shakeEffect {
@@ -1557,7 +1583,8 @@ col-2 {
     font-size: 1.4rem;
     padding: 1.6rem 2rem;
     border-radius: 2.1rem;
-    animation: shake 1s ease infinite; /* Decreased animation duration */
+    animation: shake 1s ease infinite;
+    /* Decreased animation duration */
     animation-play-state: paused;
 }
 
@@ -1567,5 +1594,33 @@ col-2 {
 }
 
 .shakeEffect.fast {
-    animation: shake 0.15s ease infinite; /* Faster animation */
+    animation: shake 0.15s ease infinite;
+    /* Faster animation */
+}
+
+/* input:focus:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  } */
+
+input::placeholder {
+    font-size: 1.4rem;
+}
+
+.invalid {
+    box-shadow: 0 0 3px 1px red;
+}
+
+.valid {
+    box-shadow: 0 0 3px 1px green;
+}
+
+.titleForm {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c1542d;
 }
