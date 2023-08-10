@@ -188,6 +188,9 @@ document.getElementById("submitButton").addEventListener("click", function (even
         result += checkValidation(x);
     })
     if (result == list.length) {
+        let loader = document.getElementById('loader');
+        loader.style.visibility = 'visible';
+
         fetch("/submit_form", {
             method: "POST",
             body: JSON.stringify({
@@ -204,9 +207,11 @@ document.getElementById("submitButton").addEventListener("click", function (even
             }
         })
             .then(response => {
+                loader.style.visibility = 'hidden';
                 showSuccessMessage();
             })
             .catch(error => {
+                loader.style.visibility = 'hidden';
                 showErrorMessage();
             });
 
@@ -265,45 +270,6 @@ function changeLanguage() {
         window.location.href = "index_en.html";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //   const link = document.querySelector('.shakeLink');
 
