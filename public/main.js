@@ -275,18 +275,6 @@ function changeLanguage() {
     }
 }
 
-//   const link = document.querySelector('.shakeLink');
-
-//   function addShakeEffect() {
-//       link.classList.add('shakeEffect');
-//       setTimeout(() => {
-//           link.classList.remove('shakeEffect');
-//       }, 500); // Remove the class after 0.5 seconds (500 milliseconds)
-//   }
-
-//   function startShaking() {
-//       setInterval(addShakeEffect, 20000); // Repeat every 2 seconds (2000 milliseconds)
-//   }
 
 
 const button = document.querySelector('.shakeEffect');
@@ -299,7 +287,7 @@ setInterval(() => {
         setTimeout(() => {
             button.classList.remove('fast');
         }, 500); // Keep the faster animation for 0.5 seconds
-    }, 0.1); // Keep the standard animation for 0.5 seconds
+    }, 400); // Keep the standard animation for 0.5 seconds
 }, 3000); // Repeat every 3 seconds
 
 
