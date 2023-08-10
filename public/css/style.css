@@ -265,42 +265,6 @@ header .container nav ul li a:hover {
     }
 }
 
-/* @media(min-width: 650px) {
-    .home {
-        background-size: auto;
-    }
-}
-
-@media(max-width: 460px) {
-    .home {
-        background-size: 100%;
-    }
-}
-
-@media(min-width: 460px) and (max-width: 512px) {
-    .home {
-        background-size: 90%;
-    }
-}
-
-@media(min-width: 512px) and (max-width: 575px) {
-    .home {
-        background-size: 80%;
-    }
-}
-
-@media(min-width: 575px) and (max-width: 650px) {
-    .home {
-        background-size: 70%;
-    }
-}
-
-@media(min-width: 712px) and (max-width: 766px) {
-    .home {
-        background-size: 60%;
-    }
-} */
-
 
 .home .container {
     /* background-color: #f4faff; */
@@ -1280,7 +1244,7 @@ video {
 
 
 /* Style for the modal */
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -1300,21 +1264,9 @@ video {
     max-width: 500px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
-.close {
-    color: #c1542d;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 
 /* Additional styling for the form, adjust as needed */
@@ -1408,6 +1360,21 @@ button:not(button.franceBtn,button.unitedBtn):hover {
     animation: slideDown 1s;
 }
 
+.close {
+    color: #c1542d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /* Add a slide-down animation */
 @keyframes slideDown {
     from {
@@ -1488,6 +1455,9 @@ col-2 {
 }
 
 
+
+
+
 /* Set the container to take the full viewport height */
 .containerAnimation {
     display: flex;
@@ -1557,24 +1527,6 @@ col-2 {
 }
 
 
-/* @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-    20%, 40%, 60%, 80% { transform: translateX(5px); }
-} */
-
-.shakeEffect {
-    background-color: white;
-    color: var(--textColor);
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    padding: 1.6rem 2rem;
-    border-radius: 2.1rem;
-    /* animation: shake 1s ease infinite;  */
-
-}
-
-
 .franceBtn {
     width: 70px;
     height: 45px;
@@ -1587,4 +1539,33 @@ col-2 {
     height: 45px;
     background: url(../img/Uk_language.png);
     background-size: cover;
+}
+
+
+
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.shakeEffect {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 1.6rem 2rem;
+    border-radius: 2.1rem;
+    animation: shake 1s ease infinite; /* Decreased animation duration */
+    animation-play-state: paused;
+}
+
+.shakeEffect.active {
+    animation-play-state: running;
+    animation: shake 0.5s ease infinite;
+}
+
+.shakeEffect.fast {
+    animation: shake 0.15s ease infinite; /* Faster animation */
 }

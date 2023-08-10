@@ -217,7 +217,20 @@ document.getElementById("submitButton").addEventListener("click", function (even
     closeModal(); // Example: Close the modal after form submission.
 });
 
-
+function changeLanguage() {
+    let element = document.getElementById("langBtn");
+    let className = element.getAttribute("class");
+    if (className == 'franceBtn') {
+        element.classList.remove('franceBtn');
+        element.classList.add('unitedBtn');
+        window.location.href = "index.html";
+    }
+    else if (className == 'unitedBtn') {
+        element.classList.remove('unitedBtn');
+        element.classList.add('franceBtn');
+        window.location.href = "index_en.html";
+    }
+}
 
 
 
@@ -268,30 +281,19 @@ document.getElementById("submitButton").addEventListener("click", function (even
 //   }
 
 //   function startShaking() {
-//       setInterval(addShakeEffect, 2000); // Repeat every 2 seconds (2000 milliseconds)
+//       setInterval(addShakeEffect, 20000); // Repeat every 2 seconds (2000 milliseconds)
 //   }
 
-// Start shaking when the page is loaded or when required.
-startShaking();
 
-function changeLanguage() {
-    let element = document.getElementById("langBtn");
-    let className = element.getAttribute("class");
-    if (className == 'franceBtn') {
-        element.classList.remove('franceBtn');
-        element.classList.add('unitedBtn');
-        window.location.href = "index.html";
-    }
-    else if (className == 'unitedBtn') {
-        element.classList.remove('unitedBtn');
-        element.classList.add('franceBtn');
-        window.location.href = "index_en.html";
-    }
-}
+const button = document.querySelector('.shakeEffect');
 
-
-////////////////////////////saeeddddddd
-
-
-// const source = tinify.fromFile('Furniture Assembly.jpg');
-// source.toFile('compressed_Furniture Assembly.jpg');
+setInterval(() => {
+    button.classList.add('active');
+    setTimeout(() => {
+        button.classList.remove('active');
+        button.classList.add('fast');
+        setTimeout(() => {
+            button.classList.remove('fast');
+        }, 500); // Keep the faster animation for 0.5 seconds
+    }, 0.1); // Keep the standard animation for 0.5 seconds
+}, 4000); // Repeat every 3 seconds
