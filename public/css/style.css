@@ -1612,11 +1612,11 @@ input::placeholder {
 }
 
 .invalid {
-    box-shadow: 0 0 3px 1px red;
+    box-shadow: 0 0 6px 3px red;
 }
 
 .valid {
-    box-shadow: 0 0 3px 1px green;
+    box-shadow: 0 0 6px 3px green;
 }
 
 .titleForm {
