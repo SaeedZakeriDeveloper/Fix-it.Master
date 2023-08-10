@@ -296,4 +296,4 @@ setInterval(() => {
             button.classList.remove('fast');
         }, 500); // Keep the faster animation for 0.5 seconds
     }, 0.1); // Keep the standard animation for 0.5 seconds
-}, 4000); // Repeat every 3 seconds
+}, 3000); // Repeat every 3 seconds
