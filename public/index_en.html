@@ -296,21 +296,22 @@
             <p>Get in touch with our team for any inquiries or assistance.</p>
             <div class="contact-container">
                 <div class="contact-left">
-                    <form action="#">
+                    <form>
                         <div class="form-group">
-                            <input type="text" name="" placeholder="Enter Your Name">
+                            <input type="text" id="fullNameContact" name="fullNameContact" placeholder="Enter Your Name" required oninput="checkValidation('fullNameContact')">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="" placeholder="Enter Your email">
+                            <input type="email" id="emailContact" name="emailContact" placeholder="Enter Your email" required oninput="checkValidation('emailContact')" >
                         </div>
                         <div class="form-group">
-                            <input type="text" name="" placeholder="Subject...">
+                            <input type="text" id="subjectContact" name="subjectContact" placeholder="Subject..." required oninput="checkValidation('subjectContact')">
                         </div>
                         <div class="form-group">
-                            <textarea name="" placeholder="Message Here ..."></textarea>
+                            <textarea id="descriptionContact" name="descriptionContact" placeholder="Message Here ..." required oninput="checkValidation('descriptionContact')"></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn">Send <i class="fas fa-paper-plane"></i></button>
+                            <button class="btn" id="contactSubmitButton" type="submit">Send <i
+                                    class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>

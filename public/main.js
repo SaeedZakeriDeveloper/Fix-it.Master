@@ -149,6 +149,7 @@ function showSuccessMessage() {
     successModal.style.display = "block";
 }
 
+
 // Function to close the success message
 function closeSuccessMessage() {
     var successModal = document.getElementById("successMessage");
@@ -170,6 +171,9 @@ function closeErrorMessage() {
 
 
 // Function to handle form submission
+
+
+
 document.getElementById("submitButton").addEventListener("click", function (event) {
     event.preventDefault();
     // Get form values
@@ -297,3 +301,60 @@ setInterval(() => {
         }, 500); // Keep the faster animation for 0.5 seconds
     }, 0.1); // Keep the standard animation for 0.5 seconds
 }, 3000); // Repeat every 3 seconds
+
+
+
+
+document.getElementById("contactSubmitButton").addEventListener("click", function (event) {
+    event.preventDefault();
+    // Get form values
+    var fullNameContact = document.getElementById("fullNameContact").value;
+    var emailContact = document.getElementById("emailContact").value;
+    var subjectContact = document.getElementById("subjectContact").value;
+    var descriptionContact = document.getElementById("descriptionContact").value;
+
+
+    var list = ['fullNameContact', 'emailContact', 'subjectContact','descriptionContact'];
+    var result = 0;
+
+
+
+    list.forEach(x => {
+        result += checkValidation(x);
+    })
+    if (result == list.length) {
+
+        fetch("/submit_contactForm", {
+            method: "POST",
+            body: JSON.stringify({
+                fullNameContact,
+                emailContact,
+                subjectContact,
+                descriptionContact,
+
+            }),
+
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        })
+            .then(response => {
+                showSuccessMessage(); 
+            })
+            .catch(error => {
+                showErrorMessage();
+            });
+
+     
+    }
+
+});
+
+
+
+
+
+
+
+
+
