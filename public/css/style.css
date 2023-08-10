@@ -1629,14 +1629,14 @@ input::placeholder {
 .multi-spinner-container {
     width: 150px;
     height: 150px;
-    position: relative;
-    margin: 30px auto;
-    overflow: hidden;
     position: absolute;
-    top: 50vh;
-    left: 50vw;
-    visibility: hidden;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden
 }
+
+
 
 .multi-spinner {
     position: absolute;
