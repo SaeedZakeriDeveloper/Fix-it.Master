@@ -298,16 +298,24 @@
                 <div class="contact-left">
                     <form>
                         <div class="form-group">
-                            <input type="text" id="fullNameContact" name="fullNameContact" placeholder="Enter Your Name" required oninput="checkValidation('fullNameContact')">
+                            <input type="text" id="fullNameContact" name="fullNameContact" placeholder="Enter Your Name"
+                                required oninput="checkValidation('fullNameContact')">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="emailContact" name="emailContact" placeholder="Enter Your email" required oninput="checkValidation('emailContact')" >
+                            <input type="email" id="emailContact" name="emailContact" placeholder="Enter Your email"
+                                required oninput="checkValidation('emailContact')">
+                            <span id="contactInvalidEmailBox" style="visibility: hidden; margin-bottom: 0.7rem; font-size: 1.2rem; margin-bottom: 0.4rem;
+                                color: white;">
+                                Email is invalid.
+                            </span>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subjectContact" name="subjectContact" placeholder="Subject..." required oninput="checkValidation('subjectContact')">
+                            <input type="text" id="subjectContact" name="subjectContact" placeholder="Subject..."
+                                required oninput="checkValidation('subjectContact')">
                         </div>
                         <div class="form-group">
-                            <textarea id="descriptionContact" name="descriptionContact" placeholder="Message Here ..." required oninput="checkValidation('descriptionContact')"></textarea>
+                            <textarea id="descriptionContact" name="descriptionContact" placeholder="Message Here ..."
+                                required oninput="checkValidation('descriptionContact')"></textarea>
                         </div>
                         <div class="form-group">
                             <button class="btn" id="contactSubmitButton" type="submit">Send <i

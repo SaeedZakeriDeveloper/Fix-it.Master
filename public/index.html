@@ -316,26 +316,33 @@
             <p>Contactez notre équipe pour toute demande de renseignements ou d'assistance.</p>
             <div class="contact-container">
                 <div class="contact-left">
-
-                    <form action="#">
+                    <form>
                         <div class="form-group">
-                            <input type="text"  placeholder="Entrez votre nom">
+                            <input type="text" id="fullNameContact" name="fullNameContact"
+                                placeholder="Entrez votre nom" required oninput="checkValidation('fullNameContact')">
                         </div>
                         <div class="form-group">
-                            <input type="email" name="" placeholder="Entrez votre adresse e-mail">
+                            <input type="email" id="emailContact" name="emailContact"
+                                placeholder="Entrez votre adresse e-mail" required
+                                oninput="checkValidation('emailContact')">
+                            <span id="contactInvalidEmailBox" style="visibility: hidden; margin-bottom: 0.7rem; font-size: 1.2rem; margin-bottom: 0.4rem;
+                                color: white;">
+                                Le courriel est invalide.
+                            </span>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="" placeholder="Sujet...">
+                            <input type="text" id="subjectContact" name="subjectContact" placeholder="Sujet..." required
+                                oninput="checkValidation('subjectContact')">
                         </div>
                         <div class="form-group">
-                            <textarea name="" placeholder="Message ici ..."></textarea>
+                            <textarea id="descriptionContact" name="descriptionContact" placeholder="Message ici ..."
+                                required oninput="checkValidation('descriptionContact')"></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn">Envoyer <i class="fas fa-paper-plane"></i></button>
+                            <button class="btn" id="contactSubmitButton" type="submit">Envoyer <i
+                                    class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
-
-
                 </div>
                 <div class="contact-right">
                     <!-- <iframe

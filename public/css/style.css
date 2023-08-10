@@ -191,6 +191,7 @@ header .container nav {
 
 header .container nav.active {
     top: 6.9rem;
+    transition: all 1.2s ease-in-out;
 }
 
 header .container nav ul li {
@@ -1673,4 +1674,9 @@ input::placeholder {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+#requestFormModal h3,
+#requestFormModal .close {
+    margin-top: 25px;
 }

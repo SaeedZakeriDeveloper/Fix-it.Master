@@ -229,8 +229,8 @@ function checkValidation(id) {
     var element = document.getElementById(id);
     var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    if (id == 'email') {
-        var invalidEmailBox = document.getElementById('invalidEmailBox');
+    if (id == 'email' || id == 'emailContact') {
+        var invalidEmailBox = id == 'email' ? document.getElementById('invalidEmailBox') : document.getElementById('contactInvalidEmailBox');
         if (element.value != '' && !element.value.match(validRegex)) {
             element.className = 'invalid';
             invalidEmailBox.style.visibility = 'visible';
@@ -314,10 +314,8 @@ document.getElementById("contactSubmitButton").addEventListener("click", functio
     var descriptionContact = document.getElementById("descriptionContact").value;
 
 
-    var list = ['fullNameContact', 'emailContact', 'subjectContact','descriptionContact'];
+    var list = ['fullNameContact', 'emailContact', 'subjectContact', 'descriptionContact'];
     var result = 0;
-
-
 
     list.forEach(x => {
         result += checkValidation(x);
@@ -339,13 +337,22 @@ document.getElementById("contactSubmitButton").addEventListener("click", functio
             }
         })
             .then(response => {
-                showSuccessMessage(); 
+                showSuccessMessage();
+                var invalidEmailBox = document.getElementById('contactInvalidEmailBox');
+
+                list.forEach(x => {
+                    var element = document.getElementById(x);
+                    element.value = '';
+                    element.className = '';
+                    element.placeholder = '';
+                    invalidEmailBox.style.visibility = 'hidden';
+                })
             })
             .catch(error => {
                 showErrorMessage();
             });
 
-     
+
     }
 
 });

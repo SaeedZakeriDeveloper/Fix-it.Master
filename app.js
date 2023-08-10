@@ -58,7 +58,7 @@ app.post('/submit_form',(req, res) => {
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 82;
 app.listen(port, () => {
   console.log(`Server started on ${port}`);
 });
