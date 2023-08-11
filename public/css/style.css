@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +7,6 @@
     outline: none;
     transition: all 0s ease-in-out;
 }
-
 
 :root {
     --topHeader: black;
@@ -159,7 +157,6 @@ header {
     background-color: var(--topHeader);
     padding: 1.5rem 0;
     z-index: 1000;
-
 }
 
 header .container {
@@ -244,31 +241,14 @@ header .container nav ul li a:hover {
 /* End Header Section  */
 /* Start Home Section  */
 .home {
-
-    /* background-image: url("../img/imageedit_4_5723801564.png"); */
     background-image: url("../img/Main-image-First-page-painting.jpg");
-
     height: 102vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-
-@media (max-width: 767px) {
-    .home {
-        /* background-image: url("../img/blur:small.png"); */
-        background-image: url("../img/Main-image-First-page-painting.jpg");
-
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-}
-
-
 .home .container {
-    /* background-color: #f4faff; */
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,9 +260,6 @@ header .container nav ul li a:hover {
     justify-content: center;
 }
 
-/*.home .container .home-text {*/
-/*    text-align: center;*/
-/*}*/
 .home .container .home-text,
 .price-box {
     text-align: center;
@@ -299,7 +276,6 @@ header .container nav ul li a:hover {
     color: var(--blueColor);
 }
 
-
 .home .container .home-text h1 {
     color: var(--headingColor);
     font-size: 5.8rem;
@@ -311,7 +287,6 @@ header .container nav ul li a:hover {
         font-size: 3rem;
     }
 }
-
 
 .home .container .home-text p {
     max-width: 67.3rem;
@@ -382,7 +357,6 @@ header .container nav ul li a:hover {
 
 .services .container .serv-box .serv-heading {
     text-align: center;
-    /* margin-bottom: 6rem; */
 }
 
 .services .container .serv-box .serv-heading h3 {
@@ -400,7 +374,6 @@ header .container nav ul li a:hover {
 .services .container .serv-box .serv-img img {
     max-width: 100%;
     border-radius: 5%;
-
 }
 
 .services .container .serv-box p {
@@ -667,7 +640,7 @@ header .container nav ul li a:hover {
 .reviews .review-box h5 {
     font-size: 1.9rem;
     font-weight: 400;
-    color: #c1542d;;
+    color: #c1542d;
     text-transform: capitalize;
 }
 
@@ -950,10 +923,8 @@ header .container nav ul li a:hover {
     transform: scaleX(1.1);
 }
 
-
 /* End News Section  */
 /* Start Contact Section  */
-
 
 .contact .container {
     text-align: center;
@@ -1011,7 +982,6 @@ header .container nav ul li a:hover {
     }
 }
 
-
 /* End Contact Section  */
 /* Start Footer Section  */
 footer .container {
@@ -1029,10 +999,6 @@ footer .container .box:first-child {
     align-items: flex-start;
     flex-direction: column;
 }
-
-/* footer .container .box img {
-    margin-bottom: 3rem;
-} */
 
 footer .container .box h4 {
     font-weight: 300;
@@ -1070,7 +1036,6 @@ footer .container .box input {
     padding: 1rem 1.1rem;
     font-size: 1.6rem;
     border: 1px solid var(--textColor);
-    /*border-right: none;*/
 }
 
 footer .container .box input:focus::placeholder {
@@ -1084,7 +1049,6 @@ footer .container .box button {
     color: var(--textColor);
     padding: 1rem 1.1rem;
     border: 1px solid var(--textColor);
-    /*border-left: none;*/
     cursor: pointer;
 }
 
@@ -1102,7 +1066,6 @@ footer .container .box .social-media a:hover i {
 
 footer .copyright {
     padding: 3rem 0;
-
 }
 
 footer .copyright p {
@@ -1154,12 +1117,6 @@ footer .copyright p span {
     }
 }
 
-/* @media(max-width: 375px) {
-    .icon-div>img:nth-child(3){
-        display: none;
-    }
-} */
-
 @media (max-width: 705px) {
     div.icon-div>img {
         width: 11vw;
@@ -1196,7 +1153,6 @@ footer .copyright p span {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
-
 }
 
 video {
@@ -1248,33 +1204,6 @@ video {
         font-size: 18px;
     }
 }
-
-
-/* Style for the modal */
-/* .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    max-width: 500px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
-
-
-
 
 /* Additional styling for the form, adjust as needed */
 .form-group {
@@ -1397,7 +1326,6 @@ button:not(button.franceBtn, button.unitedBtn):hover {
 
 /* Style the form elements */
 
-
 form {
     display: flex;
     flex-direction: column;
@@ -1430,7 +1358,6 @@ select {
 
 button[type="submit"] {
     background-color: #c1542d;
-    ;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -1462,10 +1389,6 @@ col-2 {
     width: 16.66666667%;
 }
 
-
-
-
-
 /* Set the container to take the full viewport height */
 .containerAnimation {
     display: flex;
@@ -1481,7 +1404,6 @@ col-2 {
     left: -100%;
     border-radius: 5%;
 }
-
 
 /* Add the animation */
 @keyframes slideout {
@@ -1501,7 +1423,6 @@ col-2 {
     animation-fill-mode: forwards;
 }
 
-
 .containerAnimation1 {
     display: flex;
     justify-content: flex-start;
@@ -1516,7 +1437,6 @@ col-2 {
     right: -100%;
     border-radius: 5%;
 }
-
 
 /* Add the animation */
 @keyframes slideIn {
@@ -1536,7 +1456,6 @@ col-2 {
     animation-fill-mode: forwards;
 }
 
-
 .franceBtn {
     width: 70px;
     height: 45px;
@@ -1550,9 +1469,6 @@ col-2 {
     background: url(../img/Uk_language.png);
     background-size: cover;
 }
-
-
-
 
 @keyframes shake {
 
@@ -1599,14 +1515,6 @@ col-2 {
     /* Faster animation */
 }
 
-/* input:focus:invalid {
-    box-shadow: 0 0 5px 1px red;
-  }
-  
-  input:valid {
-    border: 2px solid black;
-  } */
-
 input::placeholder {
     font-size: 1.4rem;
 }
@@ -1626,7 +1534,6 @@ input::placeholder {
     color: #c1542d;
 }
 
-
 .multi-spinner-container {
     width: 150px;
     height: 150px;
@@ -1636,8 +1543,6 @@ input::placeholder {
     transform: translate(-50%, -50%);
     visibility: hidden
 }
-
-
 
 .multi-spinner {
     position: absolute;
@@ -1650,7 +1555,6 @@ input::placeholder {
     animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
 }
 
-
 @-webkit-keyframes spin {
     from {
         -webkit-transform: rotate(0deg);
@@ -1662,7 +1566,6 @@ input::placeholder {
         transform: rotate(360deg);
     }
 }
-
 
 @keyframes spin {
     from {

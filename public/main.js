@@ -1,25 +1,12 @@
 const menuBtn = document.querySelector('.menu-bar');
 const menu = document.querySelector('nav');
-// import tinify from 'tinify';
-
-// tinify.key = 'BZVYFJNckW57SzhWjKPXn6RswGYPzCWf';    //put the tinify key
-
-// const source = tinify.fromFile('Furniture Assembly.jpg');
-// source.toFile('./img/compressed_Furniture Assembly.jpg');
-
-
-
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
     menuBtn.classList.toggle('fa-times');
 });
 
-
-
 let review = document.querySelector('#review'),
-    //dots = Array.prototype.slice.call(document.getElementById('review-dots').children),
-    //reviewContent = Array.prototype.slice.call(document.getElementById('review-content').children),
     dots = document.querySelectorAll('#review-dots li'),
     reviewContent = document.querySelectorAll('#review-content .review-box'),
     leftArrow = document.querySelector('#left-arrow'),
@@ -28,11 +15,6 @@ let review = document.querySelector('#review'),
     currentSlide = 0,
     currentActive = 0,
     reviewTimer;
-
-
-
-
-
 
 window.onload = function () {
     function playSlide(slide) {
@@ -73,7 +55,6 @@ window.onload = function () {
     playSlide(currentSlide);
 }
 
-
 const navLi = document.querySelectorAll('nav ul li a');
 const sections = document.querySelectorAll('section');
 
@@ -96,8 +77,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-
-
 function openModal() {
     var list = ['activity', 'firstName', 'lastName', 'email', 'description', 'phoneNumber', 'address'];
     var invalidEmailBox = document.getElementById('invalidEmailBox');
@@ -112,7 +91,6 @@ function openModal() {
     var modal = document.getElementById("requestFormModal");
     modal.style.display = "block";
 }
-
 
 function closeModal() {
     var modal = document.getElementById("requestFormModal");
@@ -139,16 +117,10 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-
-
-
-
-
 function showSuccessMessage() {
     var successModal = document.getElementById("successMessage");
     successModal.style.display = "block";
 }
-
 
 // Function to close the success message
 function closeSuccessMessage() {
@@ -168,12 +140,7 @@ function closeErrorMessage() {
     errorModal.style.display = "none";
 }
 
-
-
 // Function to handle form submission
-
-
-
 document.getElementById("submitButton").addEventListener("click", function (event) {
     event.preventDefault();
     // Get form values
@@ -185,7 +152,6 @@ document.getElementById("submitButton").addEventListener("click", function (even
     var phoneNumber = document.getElementById("phoneNumber").value;
     var address = document.getElementById("address").value;
     var list = ['firstName', 'lastName', 'email', 'description', 'phoneNumber', 'address'];
-
     var result = 0;
 
     list.forEach(x => {
@@ -275,8 +241,6 @@ function changeLanguage() {
     }
 }
 
-
-
 const button = document.querySelector('.shakeEffect');
 
 setInterval(() => {
@@ -290,9 +254,6 @@ setInterval(() => {
     }, 400); // Keep the standard animation for 0.5 seconds
 }, 3000); // Repeat every 3 seconds
 
-
-
-
 document.getElementById("contactSubmitButton").addEventListener("click", function (event) {
     event.preventDefault();
     // Get form values
@@ -301,7 +262,6 @@ document.getElementById("contactSubmitButton").addEventListener("click", functio
     var subjectContact = document.getElementById("subjectContact").value;
     var descriptionContact = document.getElementById("descriptionContact").value;
 
-
     var list = ['fullNameContact', 'emailContact', 'subjectContact', 'descriptionContact'];
     var result = 0;
 
@@ -309,17 +269,14 @@ document.getElementById("contactSubmitButton").addEventListener("click", functio
         result += checkValidation(x);
     })
     if (result == list.length) {
-
         fetch("/submit_contactForm", {
             method: "POST",
             body: JSON.stringify({
                 fullNameContact,
                 emailContact,
                 subjectContact,
-                descriptionContact,
-
+                descriptionContact
             }),
-
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             }
@@ -339,17 +296,5 @@ document.getElementById("contactSubmitButton").addEventListener("click", functio
             .catch(error => {
                 showErrorMessage();
             });
-
-
     }
-
 });
-
-
-
-
-
-
-
-
-

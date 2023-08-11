@@ -1,7 +1,4 @@
 const nodemailer = require('nodemailer');
-// const smtpTransport = require('nodemailer-smtp-transport');
-
-
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -10,9 +7,6 @@ var transporter = nodemailer.createTransport({
     pass: 'anbbumywwtjenkap'
   }
 });
-
-
-
 
 const express = require('express');
 const path = require('path');
@@ -24,10 +18,7 @@ app.use(
   })
 );
 
-
-
-
-app.post('/submit_form',(req, res) => {
+app.post('/submit_form', (req, res) => {
   const body = req.body;
   const activity = body.activity;
   const firstName = body.firstName;
@@ -35,8 +26,7 @@ app.post('/submit_form',(req, res) => {
   const email = body.email;
   const description = body.description;
   const phoneNumber = body.phoneNumber;
-  const  address = body.address
-  console.log(activity, firstName, lastName, email, description,phoneNumber,address  );
+  const address = body.address
 
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
@@ -45,36 +35,27 @@ app.post('/submit_form',(req, res) => {
     text: `Activity: ${activity}\nFirst Name: ${firstName}\nLast Name: ${lastName}\nPhone number:${phoneNumber}\nEmail: ${email}\nAddress:${address}\nDescription: ${description}`
   };
 
-  transporter.sendMail(mailOptions, function(error, info){
+  transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(error);
       res.status(500).send("Failed to send the message. Please try again later.");
     } else {
-      console.log('Email sent: ' + info.response);
       res.status(200).send("Message sent successfully!");
     }
   });
-
 });
-
 
 app.use(express.static(path.join(__dirname, 'public')))
 
 const port = process.env.PORT || 82;
 app.listen(port, () => {
-  console.log(`Server started on ${port}`);
 });
 
-
-
-
-app.post('/submit_contactForm',(req, res) => {
+app.post('/submit_contactForm', (req, res) => {
   const body = req.body;
   const fullNameContact = body.fullNameContact;
   const emailContact = body.emailContact;
   const subjectContact = body.subjectContact;
   const descriptionContact = body.descriptionContact;
-  console.log(fullNameContact, emailContact, descriptionContact, subjectContact );
 
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
@@ -83,16 +64,12 @@ app.post('/submit_contactForm',(req, res) => {
     text: `Full name: ${fullNameContact}\n Subject: ${subjectContact}\n Email: ${emailContact}\nDescription: ${descriptionContact}`
   };
 
-  transporter.sendMail(mailOptions, function(error, info){
+  transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(error);
       res.status(500).send("Failed to send the message. Please try again later.");
     } else {
-      console.log('Email sent: ' + info.response);
       res.status(200).send("Message sent successfully!");
     }
   });
 
 });
-
-
