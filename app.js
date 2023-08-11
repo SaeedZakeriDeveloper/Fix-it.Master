@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 
+
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -7,6 +8,8 @@ var transporter = nodemailer.createTransport({
     pass: 'anbbumywwtjenkap'
   }
 });
+
+
 
 const express = require('express');
 const path = require('path');
@@ -18,6 +21,8 @@ app.use(
   })
 );
 
+
+
 app.post('/submit_form', (req, res) => {
   const body = req.body;
   const activity = body.activity;
@@ -28,12 +33,14 @@ app.post('/submit_form', (req, res) => {
   const phoneNumber = body.phoneNumber;
   const address = body.address
 
+
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
     to: 'admin-support@fix-it-masters.com',
     subject: 'Order Request from Fix-It-Masters',
     text: `Activity: ${activity}\nFirst Name: ${firstName}\nLast Name: ${lastName}\nPhone number:${phoneNumber}\nEmail: ${email}\nAddress:${address}\nDescription: ${description}`
   };
+
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
@@ -70,9 +77,12 @@ app.post('/submit_contactForm', (req, res) => {
 });
 
 
+
 app.use(express.static(path.join(__dirname, 'public')))
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 82;
 app.listen(port, () => {
+  console.log(`Server started on ${port}`);
 });
+
 
