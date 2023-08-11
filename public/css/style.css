@@ -13,7 +13,7 @@
 :root {
     --topHeader: black;
     --blueColor: #c1542d;
-    --yellowColor: #00b4d8;
+    --yellowColor: #c1542d;
     --goldColor: #FFD60A;
     --headingColor: #ffffff;
     --textColor: #e24c11;
@@ -667,7 +667,7 @@ header .container nav ul li a:hover {
 .reviews .review-box h5 {
     font-size: 1.9rem;
     font-weight: 400;
-    color: var(--goldColor);
+    color: #c1542d;;
     text-transform: capitalize;
 }
 

@@ -12,6 +12,8 @@ var transporter = nodemailer.createTransport({
 });
 
 
+
+
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -38,7 +40,7 @@ app.post('/submit_form',(req, res) => {
 
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
-    to: 's.zaker115599@gmail.com',
+    to: 'admin-support@fix-it-masters.com',
     subject: 'Order Request from Fix-It-Masters',
     text: `Activity: ${activity}\nFirst Name: ${firstName}\nLast Name: ${lastName}\nPhone number:${phoneNumber}\nEmail: ${email}\nAddress:${address}\nDescription: ${description}`
   };
@@ -76,7 +78,7 @@ app.post('/submit_contactForm',(req, res) => {
 
   var mailOptions = {
     from: 'fixitmaster12@gmail.com',
-    to: 's.zaker115599@gmail.com',
+    to: 'admin-support@fix-it-masters.com',
     subject: 'Contact our team from Fix-It-Masters',
     text: `Full name: ${fullNameContact}\n Subject: ${subjectContact}\n Email: ${emailContact}\nDescription: ${descriptionContact}`
   };
