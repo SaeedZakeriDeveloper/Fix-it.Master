@@ -44,11 +44,6 @@ app.post('/submit_form', (req, res) => {
   });
 });
 
-app.use(express.static(path.join(__dirname, 'public')))
-
-const port = process.env.PORT || 82;
-app.listen(port, () => {
-});
 
 app.post('/submit_contactForm', (req, res) => {
   const body = req.body;
@@ -73,3 +68,11 @@ app.post('/submit_contactForm', (req, res) => {
   });
 
 });
+
+
+app.use(express.static(path.join(__dirname, 'public')))
+
+const port = process.env.PORT || 80;
+app.listen(port, () => {
+});
+
