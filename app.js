@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'fixitmaster12@gmail.com',
+    user: 'fixitmasters67@gmail.com',
     pass: 'anbbumywwtjenkap'
   }
 });
@@ -35,7 +35,7 @@ app.post('/submit_form', (req, res) => {
 
 
   var mailOptions = {
-    from: 'fixitmaster12@gmail.com',
+    from: 'fixitmasters67@gmail.com',
     to: 'admin-support@fix-it-masters.com',
     subject: 'Order Request from Fix-It-Masters',
     text: `Activity: ${activity}\nFirst Name: ${firstName}\nLast Name: ${lastName}\nPhone number:${phoneNumber}\nEmail: ${email}\nAddress:${address}\nDescription: ${description}`
@@ -60,7 +60,7 @@ app.post('/submit_contactForm', (req, res) => {
   const descriptionContact = body.descriptionContact;
 
   var mailOptions = {
-    from: 'fixitmaster12@gmail.com',
+    from: 'fixitmasters67@gmail.com',
     to: 'admin-support@fix-it-masters.com',
     subject: 'Contact our team from Fix-It-Masters',
     text: `Full name: ${fullNameContact}\n Subject: ${subjectContact}\n Email: ${emailContact}\nDescription: ${descriptionContact}`
